@@ -51,9 +51,9 @@
       <input type="checkbox" id="menu-toggle" hidden>
       <label for="menu-toggle" class="menu-button">Menu</label>
       <ul class="menu">
-        <li><a href="#breaking-news">Breaking News</a></li>
-        <li><a href="#featured-aticles">Featured Articles</a></li>
-        <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#breaking">Breaking News</a></li>
+        <li><a href="#featured">Featured Articles</a></li>
+        <li><a href="#stay-informed">Alerts</a></li>
         <li><a href="#social">Social</a></li>
       </ul>
     </nav>
@@ -78,7 +78,7 @@
         <p>The Department of Justice has announced a full investigation into decades of water distribution practices
           affecting tribal lands and rural communities.</p>
 
-        <video src="videos/water-management.mp4"></video>
+        <video src="videos/water-management.mp4" controls></video>
 
       </section>
 
@@ -88,7 +88,7 @@
         <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color
           and those in rural areas of the country.</p>
 
-        <video src="videos/voter-suppression.mp4"></video>
+        <video src="videos/voter-suppression.mp4" controls></video>
 
       </section>
     </section>
@@ -162,43 +162,40 @@
       <h2>Stay Informed. Stay Empowered.</h2>
       <p>Receive text messages with the news you want to know.</p>
       <form method="POST" action="https://wp.zybooks.com/form-viewer.php">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" autocomplete="name" required>
-        <label for="mobile">Mobile</label>
-        <input id="mobile" name="mobile" type="tel" autocomplete="tel" required>
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="mobile">Mobile</label>
+          <input id="mobile" name="mobile" type="tel" autocomplete="tel" required>
+        </div>
 
         <fieldset>
-
           <legend>Notification Preferences</legend>
 
-          <input type="checkbox" id="breaking-news" name="breaking-news">
-          <label for="breaking-news">Breaking News</label>
+          <label for="breaking-news"><input type="checkbox" id="breaking-news" name="breaking-news">Breaking
+            News</label>
 
-          <input type="checkbox" id="politics" name="politics">
-          <label for="politics">Politics</label>
+          <label for="politics"><input type="checkbox" id="politics" name="politics">Politics</label>
 
-          <input type="checkbox" id="weather" name="weather">
-          <label for="weather">Weather</label>
+          <label for="weather"><input type="checkbox" id="weather" name="weather">Weather</label>
 
-          <input type="checkbox" id="sports" name="sports">
-          <label for="sports">Sports</label>
+          <label for="sports"><input type="checkbox" id="sports" name="sports">Sports</label>
 
-          <input type="checkbox" id="entertainment" name="entertainment">
-          <label for="entertainment">Entertainment</label>
+          <label for="entertainment"><input type="checkbox" id="entertainment"
+              name="entertainment">Entertainment</label>
 
-          <input type="checkbox" id="world" name="world">
-          <label for="world">World</label>
+          <label for="world"><input type="checkbox" id="world" name="world">World</label>
 
-          <input type="checkbox" id="financial" name="financial">
-          <label for="financial">Financial</label>
-
+          <label for="financial"><input type="checkbox" id="financial" name="financial">Financial</label>
         </fieldset>
 
         <input name="subscribe" type="submit" id="subscribe" value="Subscribe">
       </form>
     </section>
   </main>
-  <footer>
+  <footer id="social">
     <h2>Follow Us</h2>
     <ul>
       <li><a href="#">Twitter/X</a></li>
