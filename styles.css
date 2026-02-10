@@ -1,10 +1,57 @@
-/* CSS by ///ADD/// YOUR NAME */
+/* CSS by Isabella Forbes */
 
 /* Imported Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* ///ADD/// CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /* Root Variables */
 :root {
@@ -39,12 +86,215 @@ body.dark-mode {
 }
 
 /* ///ADD/// Skip Link Styles */
+.skip-link{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.skip-link:focus{
+	position: static;
+	width: auto;
+	height: auto;
+}
 
 /* ///ADD/// Navigation Styles */
+header {
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  padding: 20px 30px;
+  position: relative;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3em;
+  
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  margin-bottom: 10px;
+  font-variation-settings: 'wdth' 90, 'wght' 500;
+  font-weight: 500;
+  font-stretch: ultra-condensed;
+}
+
+.menu-button {
+  background-color: var(--news-flash);
+  display: block;
+  color: var(--watchdog-white);
+  padding: 10px;
+  text-align: center;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  transition: var(--transition);
+  font-variation-settings: 'wght' 500;
+  font-weight: 500;
+}
+
+.menu-button:hover {
+  background-color: var(--blue-bulletin);
+  outline: 1px solid var(--news-flash);
+  transition: var(--transition);
+}
+
+.mobile-nav {
+  position: relative;
+}
+
+.mobile-nav .menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  box-shadow: var(--shadow);
+}
+
+.mobile-nav a {
+  display: block;
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  text-align: center;
+  padding: 10px;
+  outline: 1px solid var(--blue-bulletin);
+}
+
+.mobile-nav a:hover {
+  background-color: var(--blue-bulletin);
+  outline: 1px solid var(--news-flash);
+  transition: var(--transition);
+}
+
+
+
 
 /* ///ADD/// Global Layout Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.5;
+  background-color: var(--watchdog-white);
+  color: var(--truth-text);
+}
+
+main {
+margin: 30px;
+}
+
+#breaking section {
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  padding: 20px;
+  outline: 1px solid var(--truth-text);
+  box-shadow: var(--shadow);
+  margin: 10px;
+}
+
+#breaking section:hover {
+  transform: scale(1.05);
+  transition: var(--transition);
+}
+
+#breaking video {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+#featured article {
+  padding: 20px;
+  margin: 10px; 
+  outline: 1px solid var(--truth-text);
+  box-shadow: var(--shadow);
+}
+
+#featured article:hover {
+  transform: scale(1.05);
+  transition: var(--transition);
+}
+
+#stay-informed {
+  padding-top: 20px;
+}
+
+form {
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  outline: 1px solid var(--truth-text);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"], input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border: 1px solid var(--truth-text);
+  font-size: 1.1em;
+  
+}
+
+legend {
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+fieldset label {
+  display: inline-block;
+}
 
 /* ///ADD/// Global Text Styles */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+h2 {
+  font-size: 1.5em;
+  font-variation-settings: 'wght' 300;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-variation-settings: 'wght' 300;
+  font-weight: 300;
+}
+
+
+#welcome .tagline {
+  text-align: center;
+  padding: 20px;
+  font-variation-settings: 'wdth' 90, 'wght' 500;
+  font-weight: 500;
+  font-stretch: ultra-condensed;
+}
+
 
 
 /* ///ADD/// medium styles 620px */
@@ -61,5 +311,7 @@ body.dark-mode {
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-
+  #menu-toggle:checked ~ .menu {
+    display: block;
+  }
 }
